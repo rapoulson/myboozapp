@@ -1,4 +1,4 @@
-<h1>Listing drinks</h1>
+<h1>Listing Drinks</h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
 
   <tbody>
     <% @drinks.each do |drink| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
         <td><%= drink.name %></td>
         <td><%= drink.method %></td>
         <td><%= drink.glass %></td>

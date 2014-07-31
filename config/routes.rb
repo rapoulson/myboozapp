@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :drink_ingredients
+
+  resources :ingredients
+
   resources :drinks
 
   # The priority is based upon order of creation: first created -> highest priority.

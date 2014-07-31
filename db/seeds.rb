@@ -8,7 +8,15 @@
 
 CSV.foreach("/Users/rebeccapoulson/Desktop/raines_specs.csv", headers: true) do |row|
 
-  Drink.create( :name => row["Name"], :method => row["Method"], :ice => row["Ice"],
+  d = Drink.create( :name => row["Name"], :method => row["Method"], :ice => row["Ice"],
    :garnish => row["Garnish"], :notes => row["Notes"],  :glass => row["Glass"])
+
+
+  (2..10).step(2) do |i|
+    unless row[i] == nil
+      ing = Ingredient.create(:name => row[i])
+      DrinkIngredient.create(:drink => d, :ingredient => ing, :measure => row[i-1])
+    end
+  end
 end
 
