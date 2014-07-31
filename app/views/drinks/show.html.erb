@@ -11,6 +11,13 @@
 </p>
 
 <p>
+  <strong>Ingredient:</strong>
+  <%= @drink.ingredients.each do %>
+    <%= @ingredient %>
+  <% end %>
+</p>
+
+<p>
   <strong>Glass:</strong>
   <%= @drink.glass %>
 </p>
