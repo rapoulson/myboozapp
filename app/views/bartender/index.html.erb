@@ -1,9 +1,16 @@
 <h1>Bartender</h1>
 <%= form_tag("select_drink") do %>
   <p>
+     <p>
     <select name="method">
         <% Drink.uniq.pluck(:method).each do |m| %>
           <option value="<%= m %>"><%= m %></option>
+        <% end %>
+    </select>
+
+    <select name="ingredient">
+        <% Ingredient.uniq.pluck(:name).each do |i| %>
+          <option value="<%= i %>"><%= i %></option>
         <% end %>
     </select>
   <%= submit_tag "Search" %>
