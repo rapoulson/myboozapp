@@ -10,12 +10,13 @@
   <%= @drink.method %>
 </p>
 
-<p>
-  <strong>Ingredient:</strong>
-  <%= @drink.ingredients.each do %>
-    <%= @ingredient %>
+ <% @drink.drink_ingredients.each do |d_i| %>
+  <p>
+    <strong>Ingredient:</strong>
+    <%= d_i.ingredient.name %>
+    <%= d_i.measure %>
+  </p>
   <% end %>
-</p>
 
 <p>
   <strong>Glass:</strong>
