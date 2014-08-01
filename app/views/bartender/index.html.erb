@@ -1,17 +1,12 @@
 <h1>Bartender</h1>
-<% form_tag drinks_path do %>
+<%= form_tag("select_drink") do %>
   <p>
-    <%= text_field_tag :search %>
-    <%= submit_tag "Search" %>
+    <select name="method">
+        <% Drink.uniq.pluck(:method).each do |m| %>
+          <option value="<%= m %>"><%= m %></option>
+        <% end %>
+    </select>
+  <%= submit_tag "Search" %>
   </p>
 <% end %>
 
-<ul>
-<% for drink in @drinks %>
-  <li>
-  <%= link_to drink.name, drink_path(drink) %>
-    <% link_to "Edit", edit_drink_path(drink) %>
-    <% link_to "Destroy", drink_path(drink), :method => :delete %>
-  </li>
-<% end %>
-</ul>

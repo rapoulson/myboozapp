@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'bartender/index'
+
+  post 'bartender/:select_drink' => 'bartender#select_drink'
+
+  get 'bartender/:select_drink' => 'bartender#select_drink'
+
+  post '/select_drink' => 'bartender#select_drink'
+
+  get '/select_drink' => 'bartender#select_drink'
 
   resources :drink_ingredients
 
