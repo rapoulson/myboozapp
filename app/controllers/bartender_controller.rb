@@ -5,7 +5,10 @@ class BartenderController < ApplicationController
   def select_drink
     @x = params[:method]
     @y = params[:name]
-     @selection = Drink.where("method = '#{@x}'")
+    logger.info params
+     @selection = Drink.joins(:ingredients).where(method: @x, ingredients: {name: @y})
      redirect_to(@selection[0])
   end
+
+
 end

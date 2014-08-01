@@ -8,7 +8,7 @@
         <% end %>
     </select>
 
-    <select name="ingredient">
+    <select name="name">
         <% Ingredient.uniq.pluck(:name).each do |i| %>
           <option value="<%= i %>"><%= i %></option>
         <% end %>
