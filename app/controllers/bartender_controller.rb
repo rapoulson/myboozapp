@@ -7,7 +7,7 @@ class BartenderController < ApplicationController
     @y = params[:name]
     logger.info params
      @selection = Drink.joins(:ingredients).where(method: @x, ingredients: {name: @y})
-     redirect_to(@selection[0])
+     redirect_to(@selection.shuffle[0])
   end
 
 
