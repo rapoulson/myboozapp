@@ -12,9 +12,7 @@
     <% @drink_ingredients.each do |drink_ingredient| %>
       <tr>
         <td><%= drink_ingredient.measure %></td>
-        <td><%= link_to 'Show', drink_ingredient %></td>
-        <td><%= link_to 'Edit', edit_drink_ingredient_path(drink_ingredient) %></td>
-        <td><%= link_to 'Destroy', drink_ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Recipe', drink_ingredient %></td>
       </tr>
     <% end %>
   </tbody>
