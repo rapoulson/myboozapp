@@ -13,7 +13,7 @@ class BartenderController < ApplicationController
       logger.info "redirect the user to #{target}"
       redirect_to target
     else
-      redirect_to "http://google.com"
+      render :notfound
     end
   end
 
