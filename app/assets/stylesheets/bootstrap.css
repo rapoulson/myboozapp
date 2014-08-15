@@ -2711,6 +2711,11 @@ select[multiple].input-lg {
     padding-top: 7px;
   }
 }
+
+.bold-link{
+  color: #18bc9c;
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
