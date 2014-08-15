@@ -8,6 +8,14 @@ Rails.application.routes.draw do
 
   get '/select_drink' => 'bartender#select_drink'
 
+  post 'bartender/:notfound' => 'bartender#notfound'
+
+  get 'bartender/:notfound' => 'bartender#notfound'
+
+  post '/notfound' => 'bartender#notfound'
+
+  get '/notfound' => 'bartender#notfound'
+
   resources :drink_ingredients
 
   resources :ingredients
