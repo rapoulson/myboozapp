@@ -6,16 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-CSV.foreach("/home/devoe/raines_specs.csv", headers: true) do |row|
-
+CSV.foreach("/Users/rebeccapoulson/Desktop/my_specs.csv", headers: true) do |row|
   d = Drink.create( :name => row["Name"], :method => row["Method"], :ice => row["Ice"],
    :garnish => row["Garnish"], :notes => row["Notes"],  :glass => row["Glass"])
 
 
-  (2..10).step(2) do |i|
+  ing_index = [2,7,11,14,17,20]
+  ing_index.each do |i|
     unless row[i] == nil
       ing = Ingredient.create(:name => row[i])
-      DrinkIngredient.create(:drink => d, :ingredient => ing, :measure => row[i-1])
+      DrinkIngredient.create(:drink => d, :ingredient => ing, :measure => row[i-1], :role => row[i+1], :reccomendation => row[i+2], :aged => row[i+3])
     end
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140731121103) do
+ActiveRecord::Schema.define(version: 20141005214714) do
 
   create_table "drink_ingredients", force: true do |t|
     t.integer  "ingredient_id"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(version: 20140731121103) do
     t.float    "measure"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "role"
+    t.string   "reccomendation"
+    t.boolean  "aged"
   end
 
   create_table "drinks", force: true do |t|
