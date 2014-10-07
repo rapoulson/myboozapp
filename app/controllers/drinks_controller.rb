@@ -10,6 +10,11 @@ class DrinksController < ApplicationController
   # GET /drinks/1
   # GET /drinks/1.json
   def show
+    if params[:method] && params[:name]
+      @button = true
+    else
+      @button = false
+    end
   end
 
   # GET /drinks/new

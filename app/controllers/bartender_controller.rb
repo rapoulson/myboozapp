@@ -8,14 +8,11 @@ class BartenderController < ApplicationController
     @selection = Drink.joins(:ingredients).where(method: @x, ingredients: {name: @y})
     unless @selection.empty?
       target = @selection.shuffle[0]
-      logger.info "selections: #{@selection}"
-      logger.info "shuffled: #{@selection.shuffle}"
-      logger.info "redirect the user to #{target}"
-      redirect_to target
+      redirect_to drink_path(target, :method => @x, :name => @y)
+      # redirect_to target
     else
       render :notfound
     end
   end
-
 
 end

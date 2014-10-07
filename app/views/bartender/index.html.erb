@@ -93,8 +93,8 @@
   <p>
      <p>
       <select name="name">
-        <% Ingredient.uniq.pluck(:name).each do |i| %>
-          <option value="<%= i %>"><%= i %></option>
+        <% Ingredient.joins(:drinks).where("drink_ingredients.role = ?", "Base").select(:name).distinct.each do |i| %>
+          <option value="<%= i.name %>"><%= i.name %></option>
         <% end %>
     </select>
     

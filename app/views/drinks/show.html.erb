@@ -118,4 +118,13 @@
   <%= @drink.notes %>
 </p>
 
-<%= link_to '|Back|', drinks_path %>
+<% if @button %>
+  <%= form_tag('/select_drink') do %>
+    <h3>Not quite what you're looking for? </h3>
+    <%= hidden_field_tag :name, params[:name] %>
+    <%= hidden_field_tag :method, params[:method] %>
+    <%= submit_tag "Try Again" %>
+  <% end %>
+<% else %>
+<span>there's no form</span>
+<% end %>
