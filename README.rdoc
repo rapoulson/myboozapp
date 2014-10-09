@@ -1,1 +1,1 @@
-Boozapp is a cocktail database I built at The Flatiron School using Ruby on Rails, mySQL and Bootstrap.
+Boozapp is a cocktail database I built at The Flatiron School using Ruby on Rails and Bootstrap.

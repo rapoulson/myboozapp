@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class DrinkTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  describe Drink do 
+    my_drink = Drink.create!(:name => "My favorite drink")
+    my_drink.to_param should == [my_drink.name,"My favorite drink"]
+  end
+    
+  end
 end
