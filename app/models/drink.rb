@@ -5,7 +5,7 @@ class Drink < ActiveRecord::Base
   has_many :ingredients, :through => :drink_ingredients
 
   def to_param
-    "#{name}".parameterize
+    name
   end
 
   def self.find(input)
