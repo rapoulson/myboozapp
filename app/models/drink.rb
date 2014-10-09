@@ -1,5 +1,3 @@
-
-
 class Drink < ActiveRecord::Base
   extend FriendlyId
 
