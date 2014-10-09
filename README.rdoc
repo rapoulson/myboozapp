@@ -1,12 +1,1 @@
-== README
-ruby 2.1.1
-Rails 4.1.4
-
-To get started, just run bundle install, there's no need to migrate or seed a database.
-
-* ...Next Steps
-Obviously, there's still a lot of work to be done here, primarily on the front end, which was supposed to be the main thrust of this assignment. If I were to continue work on this project, after I implemented the infinite scroll and wrote some stylesheets, I'd prioritize hiding my API keys and setting it up so that the first time you contact the API it saves the information for that character to the database. This would increase performance by allowing later requests to be made to the database instead of the API.
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Boozapp is a cocktail database I built at The Flatiron School using Ruby on Rails, mySQL and Bootstrap.
