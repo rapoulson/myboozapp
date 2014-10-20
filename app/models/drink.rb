@@ -9,7 +9,7 @@ class Drink < ActiveRecord::Base
     name
   end
 
-  def self.find(name)
-    find_by_name(name)
-  end
+  #def self.find(name)
+   # find_by_name(name)
+  #end
 end
